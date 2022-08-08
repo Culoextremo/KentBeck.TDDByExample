@@ -2,14 +2,15 @@
 {
     public class Dollar
     {
-        public Dollar()
+        private int amount;
+        public Dollar(int amount)
         {
-            
+            this.amount = amount;
         }
 
         public int Times(int multiplier)
         {
-            return 5 * multiplier;
+            return amount * multiplier;
         }
     }
 }
