@@ -7,6 +7,7 @@
         public Dollar(int amount)
         {
             this.amount = amount;
+            this.currency = currency;
         }
 
         public override Money Times(int multiplier)

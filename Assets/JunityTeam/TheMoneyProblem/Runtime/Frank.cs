@@ -2,6 +2,8 @@
 {
     public class Frank : Money
     {
+        public string currency = "CHF";
+
         public Frank(int amount)
         {
             this.amount = amount;
