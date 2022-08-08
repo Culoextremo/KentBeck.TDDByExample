@@ -40,6 +40,19 @@ namespace JunityTeam.TDDByExample.TheMoneyProblem.Tests
         }
         
         [Test]
+        public void FiveFranksEqualFiveFranks()
+        {
+            new Frank(5).Should().Be(new Frank(5));
+        }
+
+        [Test]
+        public void FiveFranksNotEqualsTenFranks()
+        {
+            new Frank(5).Should().NotBe(new Frank(10));
+        }
+        
+        
+        [Test]
         public void FiveTimesTwoThenSameFiveTimesTwo()
         {
             Dollar five = new Dollar(5);
