@@ -50,6 +50,12 @@ namespace JunityTeam.TDDByExample.TheMoneyProblem.Tests
         {
             new Frank(5).Should().NotBe(new Frank(10));
         }
+
+        [Test]
+        public void FiveFranksNotEqualToFiveDollars()
+        {
+            new Frank(5).Should().NotBe(new Dollar(5));
+        }
         
         
         [Test]
