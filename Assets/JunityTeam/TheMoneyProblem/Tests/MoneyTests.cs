@@ -12,7 +12,7 @@ namespace JunityTeam.TDDByExample.TheMoneyProblem.Tests
         [TestCase(10, 20)]
         public void MultiplicationFranks(int value, int multiplier)
         {
-            Frank frank = Money.Frank(value);
+            Money frank = Money.Frank(value);
             frank.Times(multiplier).Should().Be(Money.Frank(value * multiplier));
         }
         
@@ -60,13 +60,13 @@ namespace JunityTeam.TDDByExample.TheMoneyProblem.Tests
         [Test]
         public void DollarHasCorrectCurrency()
         {
-            "USD".Should().Be(Money.Dollar(1).currency);
+            "USD".Should().Be(Money.Dollar(1).Currency());
         }
         
         [Test]
         public void FrankHasCorrectCurrency()
         {
-            "CHF".Should().Be(Money.Frank(1).currency);
+            "CHF".Should().Be(Money.Frank(1).Currency());
         }
         
         [Test]
