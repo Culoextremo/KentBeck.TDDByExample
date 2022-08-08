@@ -18,7 +18,7 @@ namespace JunityTeam.TDDByExample.TheMoneyProblem.Tests
         }
 
         [Test]
-        public void TestEquality()
+        public void FiveDollarsEqualFiveDollars()
         {
             new Dollar(5).Should().Be(new Dollar(5));
         }
