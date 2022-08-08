@@ -23,20 +23,20 @@ namespace JunityTeam.TDDByExample.TheMoneyProblem.Tests
         [TestCase(10, 20)]
         public void MultiplicationDollars(int value, int multiplier)
         {
-            Dollar dollar = new Dollar(value);
+            Money dollar = Money.Dollar(value);
             dollar.Times(multiplier).Should().Be(new Dollar(value * multiplier));
         }
 
         [Test]
         public void FiveDollarsEqualFiveDollars()
         {
-            new Dollar(5).Should().Be(new Dollar(5));
+            Money.Dollar(5).Should().Be(Money.Dollar(5));
         }
 
         [Test]
         public void FiveDollarsNotEqualsTenDollars()
         {
-            new Dollar(5).Should().NotBe(new Dollar(10));
+            Money.Dollar(5).Should().NotBe(Money.Dollar(10));
         }
         
         [Test]
@@ -61,9 +61,9 @@ namespace JunityTeam.TDDByExample.TheMoneyProblem.Tests
         [Test]
         public void FiveTimesTwoThenSameFiveTimesTwo()
         {
-            Dollar five = new Dollar(5);
-            five.Times(2).Should().Be(new Dollar(10));
-            five.Times(2).Should().Be(new Dollar(10));
+            Money five = Money.Dollar(5);
+            five.Times(2).Should().Be(Money.Dollar(10));
+            five.Times(2).Should().Be(Money.Dollar(10));
         }
     }
 }

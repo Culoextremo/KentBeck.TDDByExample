@@ -7,7 +7,7 @@
             this.amount = amount;
         }
 
-        public Frank Times(int multiplier)
+        public override Money Times(int multiplier)
         {
             return new Frank(amount * multiplier);
         }
