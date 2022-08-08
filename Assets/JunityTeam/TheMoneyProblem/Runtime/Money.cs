@@ -5,6 +5,12 @@
         protected int amount;
         public string Currency { get; protected set; }
         
+        public Money(int amount, string currency)
+        {
+            this.amount = amount;
+            Currency = currency;
+        }
+        
         public override bool Equals(object obj)
         {
             var money = (Money) obj;
