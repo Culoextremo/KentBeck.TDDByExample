@@ -13,12 +13,12 @@
         
         public static Money Dollar(int amount)
         {
-            return new Dollar(amount);
+            return new Dollar(amount, "USD");
         }
         
         public static Money Frank(int amount)
         {
-            return new Frank(amount);
+            return new Frank(amount, "CHF");
         }
 
         public abstract Money Times(int multiplier);

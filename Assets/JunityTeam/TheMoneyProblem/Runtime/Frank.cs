@@ -2,15 +2,15 @@
 {
     public class Frank : Money
     {
-        public Frank(int amount)
+        public Frank(int amount, string currency)
         {
             this.amount = amount;
-            Currency = "CHF";
+            Currency = currency;
         }
 
         public override Money Times(int multiplier)
         {
-            return new Frank(amount * multiplier);
+            return Money.Frank(amount * multiplier);
         }
     }
 }
