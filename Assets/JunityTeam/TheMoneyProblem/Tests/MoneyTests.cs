@@ -60,13 +60,13 @@ namespace JunityTeam.TDDByExample.TheMoneyProblem.Tests
         [Test]
         public void DollarHasCorrectCurrency()
         {
-            "USD".Should().Be(Money.Dollar(1).Currency());
+            "USD".Should().Be(Money.Dollar(1).Currency);
         }
         
         [Test]
         public void FrankHasCorrectCurrency()
         {
-            "CHF".Should().Be(Money.Frank(1).Currency());
+            "CHF".Should().Be(Money.Frank(1).Currency);
         }
         
         [Test]

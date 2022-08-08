@@ -4,12 +4,8 @@
     {
         public Dollar(int amount)
         {
-            this.amount = amount; 
-        }
-
-        public override string Currency()
-        {
-            return "USD";
+            this.amount = amount;
+            Currency = "USD";
         }
 
         public override Money Times(int multiplier)

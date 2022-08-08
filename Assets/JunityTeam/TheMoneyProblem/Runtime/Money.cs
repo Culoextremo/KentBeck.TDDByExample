@@ -3,14 +3,13 @@
     public abstract class Money
     {
         protected int amount;
-
+        public string Currency { get; protected set; }
+        
         public override bool Equals(object obj)
         {
             var money = (Money) obj;
             return money.amount == amount && money.GetType() == GetType();
         }
-
-        public abstract string Currency();
         
         public static Money Dollar(int amount)
         {

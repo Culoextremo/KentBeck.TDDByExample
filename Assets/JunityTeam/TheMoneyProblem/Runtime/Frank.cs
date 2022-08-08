@@ -5,11 +5,7 @@
         public Frank(int amount)
         {
             this.amount = amount;
-        }
-        
-        public override string Currency()
-        {
-            return "CHF";
+            Currency = "CHF";
         }
 
         public override Money Times(int multiplier)
