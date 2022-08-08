@@ -2,6 +2,8 @@
 {
     public class Dollar : Money
     {
+        public string currency = "USD";
+
         public Dollar(int amount)
         {
             this.amount = amount;

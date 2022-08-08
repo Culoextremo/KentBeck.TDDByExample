@@ -56,6 +56,12 @@ namespace JunityTeam.TDDByExample.TheMoneyProblem.Tests
         {
             Money.Frank(5).Should().NotBe(Money.Dollar(5));
         }
+
+        [Test]
+        public void DollarHasCorrectCurrency()
+        {
+            "USD".Should().Be(Money.Dollar(1).currency);
+        }
         
         [Test]
         public void FiveTimesTwoThenSameFiveTimesTwo()
