@@ -10,8 +10,18 @@ namespace JunityTeam.TDDByExample.TheMoneyProblem.Tests
         [TestCase(2, 5)]
         [TestCase(5, 10)]
         [TestCase(10, 20)]
-
-        public void Multiplication(int value, int multiplier)
+        public void MultiplicationFranks(int value, int multiplier)
+        {
+            Frank frank = new Frank(value);
+            frank.Times(multiplier).Should().Be(new Frank(value * multiplier));
+        }
+        
+        [Test]
+        [TestCase(5, 2)]
+        [TestCase(2, 5)]
+        [TestCase(5, 10)]
+        [TestCase(10, 20)]
+        public void MultiplicationDollars(int value, int multiplier)
         {
             Dollar dollar = new Dollar(value);
             dollar.Times(multiplier).Should().Be(new Dollar(value * multiplier));
