@@ -16,6 +16,12 @@ namespace JunityTeam.TDDByExample.TheMoneyProblem.Tests
             Dollar dollar = new Dollar(value);
             dollar.Times(multiplier).amount.Should().Be(value * multiplier);
         }
+
+        [Test]
+        public void TestEquality()
+        {
+            new Dollar(5).Should().Be(new Dollar(5));
+        }
         
         [Test]
         public void FiveTimesTwoThenSameFiveTimesTwo()
