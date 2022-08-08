@@ -1,0 +1,14 @@
+{
+    "name": "JunityTeam.TDDByExample.TheMoneyProblem",
+    "rootNamespace": "JunityTeam.TDDByExample.TheMoneyProblem",
+    "references": [],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}
