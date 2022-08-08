@@ -8,7 +8,7 @@
 
         public override Money Times(int multiplier)
         {
-            return Money.Frank(amount * multiplier);
+            return new Frank(amount * multiplier, Currency);
         }
     }
 }
