@@ -12,8 +12,8 @@ namespace JunityTeam.TDDByExample.TheMoneyProblem.Tests
         [TestCase(10, 20)]
         public void MultiplicationFranks(int value, int multiplier)
         {
-            Frank frank = new Frank(value);
-            frank.Times(multiplier).Should().Be(new Frank(value * multiplier));
+            Frank frank = Money.Frank(value);
+            frank.Times(multiplier).Should().Be(Money.Frank(value * multiplier));
         }
         
         [Test]
@@ -24,7 +24,7 @@ namespace JunityTeam.TDDByExample.TheMoneyProblem.Tests
         public void MultiplicationDollars(int value, int multiplier)
         {
             Money dollar = Money.Dollar(value);
-            dollar.Times(multiplier).Should().Be(new Dollar(value * multiplier));
+            dollar.Times(multiplier).Should().Be(Money.Dollar(value * multiplier));
         }
 
         [Test]
@@ -42,21 +42,20 @@ namespace JunityTeam.TDDByExample.TheMoneyProblem.Tests
         [Test]
         public void FiveFranksEqualFiveFranks()
         {
-            new Frank(5).Should().Be(new Frank(5));
+            Money.Frank(5).Should().Be(Money.Frank(5));
         }
 
         [Test]
         public void FiveFranksNotEqualsTenFranks()
         {
-            new Frank(5).Should().NotBe(new Frank(10));
+            Money.Frank(5).Should().NotBe(Money.Frank(10));
         }
 
         [Test]
         public void FiveFranksNotEqualToFiveDollars()
         {
-            new Frank(5).Should().NotBe(new Dollar(5));
+            Money.Frank(5).Should().NotBe(Money.Dollar(5));
         }
-        
         
         [Test]
         public void FiveTimesTwoThenSameFiveTimesTwo()

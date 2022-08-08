@@ -14,6 +14,11 @@
         {
             return new Dollar(amount);
         }
+        
+        public static Frank Frank(int amount)
+        {
+            return new Frank(amount);
+        }
 
         public abstract Money Times(int multiplier);
         
