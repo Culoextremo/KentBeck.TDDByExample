@@ -6,33 +6,17 @@ namespace JunityTeam.TDDByExample.TheMoneyProblem.Tests
     public class MoneyTests
     {
         [Test]
-        public void FiveTimesTwo()
-        {
-            Dollar five = new Dollar(5);
-            five.Times(2).amount.Should().Be(five.amount * 2);
-        }
+        [TestCase(5, 2)]
+        [TestCase(2, 5)]
+        [TestCase(5, 10)]
+        [TestCase(10, 20)]
 
-        [Test]
-        public void TwoTimesFive()
+        public void Multiplication(int value, int multiplier)
         {
-            Dollar two = new Dollar(2);
-            two.Times(5).amount.Should().Be(two.amount * 5);
+            Dollar dollar = new Dollar(value);
+            dollar.Times(multiplier).amount.Should().Be(value * multiplier);
         }
         
-        [Test]
-        public void FiveTimesTen()
-        {
-            Dollar five = new Dollar(5);
-            five.Times(10).amount.Should().Be(five.amount * 10);
-        }
-
-        [Test]
-        public void TenTimesTwenty()
-        {
-            Dollar ten = new Dollar(10);
-            ten.Times(20).amount.Should().Be(ten.amount * 20);
-        }
-
         [Test]
         public void FiveTimesTwoThenSameFiveTimesTwo()
         {
