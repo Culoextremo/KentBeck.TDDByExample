@@ -2,7 +2,7 @@
 {
     public class Dollar
     {
-        private int amount;
+        public int amount;
         public Dollar(int amount)
         {
             this.amount = amount;
