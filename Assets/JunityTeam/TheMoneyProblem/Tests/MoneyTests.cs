@@ -22,6 +22,12 @@ namespace JunityTeam.TDDByExample.TheMoneyProblem.Tests
         {
             new Dollar(5).Should().Be(new Dollar(5));
         }
+
+        [Test]
+        public void FiveDollarsNotEqualsTenDollars()
+        {
+            new Dollar(5).Should().NotBe(new Dollar(10));
+        }
         
         [Test]
         public void FiveTimesTwoThenSameFiveTimesTwo()
