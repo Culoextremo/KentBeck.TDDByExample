@@ -8,9 +8,9 @@
             this.amount = amount;
         }
 
-        public int Times(int multiplier)
+        public Dollar Times(int multiplier)
         {
-            return amount * multiplier;
+            return new Dollar(amount * multiplier);
         }
     }
 }
