@@ -10,10 +10,10 @@ namespace JunityTeam.TDDByExample.TheMoneyProblem.Tests
         [TestCase(2, 5)]
         [TestCase(5, 10)]
         [TestCase(10, 20)]
-        public void MultiplicationFranks(int value, int multiplier)
+        public void MultiplicationFrancs(int value, int multiplier)
         {
-            Money frank = Money.Frank(value);
-            frank.Times(multiplier).Should().Be(Money.Frank(value * multiplier));
+            Money franc = Money.Franc(value);
+            franc.Times(multiplier).Should().Be(Money.Franc(value * multiplier));
         }
         
         [Test]
@@ -40,21 +40,21 @@ namespace JunityTeam.TDDByExample.TheMoneyProblem.Tests
         }
         
         [Test]
-        public void FiveFranksEqualFiveFranks()
+        public void FiveFrancsEqualFiveFrancs()
         {
-            Money.Frank(5).Should().Be(Money.Frank(5));
+            Money.Franc(5).Should().Be(Money.Franc(5));
         }
 
         [Test]
-        public void FiveFranksNotEqualsTenFranks()
+        public void FiveFrancsNotEqualsTenFrancs()
         {
-            Money.Frank(5).Should().NotBe(Money.Frank(10));
+            Money.Franc(5).Should().NotBe(Money.Franc(10));
         }
 
         [Test]
-        public void FiveFranksNotEqualToFiveDollars()
+        public void FiveFrancsNotEqualToFiveDollars()
         {
-            Money.Frank(5).Should().NotBe(Money.Dollar(5));
+            Money.Franc(5).Should().NotBe(Money.Dollar(5));
         }
 
         [Test]
@@ -64,9 +64,9 @@ namespace JunityTeam.TDDByExample.TheMoneyProblem.Tests
         }
         
         [Test]
-        public void FrankHasCorrectCurrency()
+        public void FrancHasCorrectCurrency()
         {
-            "CHF".Should().Be(Money.Frank(1).Currency);
+            "CHF".Should().Be(Money.Franc(1).Currency);
         }
         
         [Test]

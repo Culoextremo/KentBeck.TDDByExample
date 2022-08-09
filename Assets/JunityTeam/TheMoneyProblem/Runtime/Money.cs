@@ -22,9 +22,9 @@
             return new Dollar(amount, "USD");
         }
         
-        public static Money Frank(int amount)
+        public static Money Franc(int amount)
         {
-            return new Frank(amount, "CHF");
+            return new Franc(amount, "CHF");
         }
 
         public abstract Money Times(int multiplier);
