@@ -16,7 +16,12 @@
             var money = (Money) obj;
             return money.amount == amount && money.Currency == Currency;
         }
-        
+
+        public Money Reduce(string to)
+        {
+            return this;
+        }
+
         public static Money Dollar(int amount)
         {
             return new Money(amount, "USD");

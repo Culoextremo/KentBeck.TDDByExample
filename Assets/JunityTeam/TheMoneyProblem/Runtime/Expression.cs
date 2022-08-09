@@ -2,5 +2,6 @@
 {
     public interface Expression
     {
+        public Money Reduce(string to);
     }
 }
