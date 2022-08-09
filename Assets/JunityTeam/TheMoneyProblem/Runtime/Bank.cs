@@ -6,5 +6,10 @@
         {
             return source.Reduce(to);
         }
+
+        public void AddRate(string chf, string usd, int i)
+        {
+            
+        }
     }
 }

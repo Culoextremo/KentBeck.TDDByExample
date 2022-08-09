@@ -96,6 +96,15 @@ namespace JunityTeam.TDDByExample.TheMoneyProblem.Tests
         }
 
         [Test]
+        public void ReduceMoneyDifferentCurrency()
+        {
+            Bank bank = new Bank();
+            bank.AddRate("CHF", "USD", 2);
+            Money result = bank.Reduce(Money.Franc(2), "USD");
+            result.Should().Be(Money.Dollar(1));
+        }
+
+        [Test]
         public void FiveTimesTwoThenSameFiveTimesTwo()
         {
             Money five = Money.Dollar(5);

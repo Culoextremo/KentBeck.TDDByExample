@@ -19,7 +19,9 @@
 
         public Money Reduce(string to)
         {
-            return this;
+            int rate = Currency.Equals("CHF") && to.Equals("USD") ? 2 : 1;
+            
+            return new Money(amount / rate , to);
         }
 
         public static Money Dollar(int amount)
