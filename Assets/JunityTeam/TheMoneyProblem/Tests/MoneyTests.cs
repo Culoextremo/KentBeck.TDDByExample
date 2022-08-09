@@ -8,7 +8,6 @@ namespace JunityTeam.TDDByExample.TheMoneyProblem.Tests
         [Test]
         [TestCase(5, 2)]
         [TestCase(2, 5)]
-        [TestCase(5, 10)]
         [TestCase(10, 20)]
         public void MultiplicationFrancs(int value, int multiplier)
         {
@@ -19,7 +18,6 @@ namespace JunityTeam.TDDByExample.TheMoneyProblem.Tests
         [Test]
         [TestCase(5, 2)]
         [TestCase(2, 5)]
-        [TestCase(5, 10)]
         [TestCase(10, 20)]
         public void MultiplicationDollars(int value, int multiplier)
         {
