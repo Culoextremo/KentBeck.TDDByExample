@@ -79,6 +79,15 @@ namespace JunityTeam.TDDByExample.TheMoneyProblem.Tests
         }
 
         [Test]
+        public void TestBankReduceSum()
+        {
+            Expression sum = new Sum(Money.Dollar(3), Money.Dollar(4));
+            Bank bank = new Bank();
+            Money result = bank.Reduce(sum, "USD");
+            result.Should().Be(Money.Dollar(7));
+        }
+
+        [Test]
         public void FiveTimesTwoThenSameFiveTimesTwo()
         {
             Money five = Money.Dollar(5);

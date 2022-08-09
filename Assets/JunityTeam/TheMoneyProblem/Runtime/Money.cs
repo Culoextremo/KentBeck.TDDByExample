@@ -2,7 +2,7 @@
 {
     public class Money : Expression
     {
-        protected int amount;
+        public int amount;
         public string Currency { get; protected set; }
         
         public Money(int amount, string currency)
