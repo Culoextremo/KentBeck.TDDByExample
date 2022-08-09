@@ -16,5 +16,10 @@
             int amount = augend.Reduce(bank,to).amount + addend.Reduce(bank, to).amount;
             return new Money(amount, to);
         }
+
+        public Expression Plus(Expression addend)
+        {
+            return new Sum(this, addend);
+        }
     }
 }

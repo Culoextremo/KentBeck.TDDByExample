@@ -109,12 +109,24 @@ namespace JunityTeam.TDDByExample.TheMoneyProblem.Tests
         [Test]
         public void MixedAddition()
         {
-            Money fiveDollars = Money.Dollar(5);
-            Money tenFrancs = Money.Franc(10);
+            Expression fiveDollars = Money.Dollar(5);
+            Expression tenFrancs = Money.Franc(10);
             Bank bank = new Bank();
             bank.AddRate("CHF", "USD", 2);
             Money result = bank.Reduce(fiveDollars.Plus(tenFrancs), "USD");
             result.Should().Be(Money.Dollar(10));
+        }
+
+        [Test]
+        public void TestSumPlusMoney()
+        {
+            Expression fiveDollars = Money.Dollar(5);
+            Expression tenFrancs = Money.Franc(10);
+            Bank bank = new Bank();
+            bank.AddRate("CHF", "USD", 2);
+            Expression sum = new Sum(fiveDollars, tenFrancs).Plus(fiveDollars);
+            Money result = bank.Reduce(sum, "USD");
+            result.Should().Be(Money.Dollar(15));
         }
 
         [Test]
