@@ -27,9 +27,9 @@
             return new Franc(amount, "CHF");
         }
 
-        public virtual Money Times(int multiplier)
+        public Money Times(int multiplier)
         {
-            return null;
+            return new Money(amount * multiplier, Currency);
         }
         
     }
