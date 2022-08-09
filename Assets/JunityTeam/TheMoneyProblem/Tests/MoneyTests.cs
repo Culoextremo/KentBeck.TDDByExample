@@ -1,4 +1,6 @@
-﻿using FluentAssertions;
+﻿using System;
+using System.Collections.Generic;
+using FluentAssertions;
 using NUnit.Framework;
 
 namespace JunityTeam.TDDByExample.TheMoneyProblem.Tests
@@ -104,6 +106,12 @@ namespace JunityTeam.TDDByExample.TheMoneyProblem.Tests
             result.Should().Be(Money.Dollar(1));
         }
 
+        [Test]
+        public void TestIdentityRate()
+        {
+            new Bank().Rate("USD", "USD").Should().Be(1);
+        }
+        
         [Test]
         public void FiveTimesTwoThenSameFiveTimesTwo()
         {

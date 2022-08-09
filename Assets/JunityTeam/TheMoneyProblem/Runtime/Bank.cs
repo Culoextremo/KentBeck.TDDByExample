@@ -1,20 +1,32 @@
-﻿namespace JunityTeam.TDDByExample.TheMoneyProblem
+﻿using System.Collections;
+using System.Collections.Generic;
+
+namespace JunityTeam.TDDByExample.TheMoneyProblem
 {
     public class Bank
     {
+        private Dictionary<(string,string), int> rates;
+
+        public Bank()
+        {
+            rates = new Dictionary<(string,string), int>();
+        }
+        
         public Money Reduce(Expression source, string to)
         {
             return source.Reduce(this, to);
         }
 
-        public void AddRate(string chf, string usd, int i)
+        public void AddRate(string source, string target, int rate)
         {
-            
+            rates.Add((source, target), rate);
         }
 
         public int Rate(string from, string to)
         {
-            return from.Equals("CHF") && to.Equals("USD") ? 2 : 1;
+            if (from == to) return 1;
+            int rate = rates[(from, to)];
+            return rate;
         }
     }
 }
