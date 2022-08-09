@@ -13,7 +13,7 @@
 
         public Money Reduce(Bank bank, string to)
         {
-            int amount = augend.amount + addend.amount;
+            int amount = augend.Reduce(bank,to).amount + addend.Reduce(bank, to).amount;
             return new Money(amount, to);
         }
     }
