@@ -128,6 +128,19 @@ namespace JunityTeam.TDDByExample.TheMoneyProblem.Tests
             Money result = bank.Reduce(sum, "USD");
             result.Should().Be(Money.Dollar(15));
         }
+        
+        
+        [Test]
+        public void TestSumTimes()
+        {
+            Expression fiveDollars = Money.Dollar(5);
+            Expression tenFrancs = Money.Franc(10);
+            Bank bank = new Bank();
+            bank.AddRate("CHF", "USD", 2);
+            Expression sum = new Sum(fiveDollars, tenFrancs).Times(2);
+            Money result = bank.Reduce(sum, "USD");
+            result.Should().Be(Money.Dollar(20));
+        }
 
         [Test]
         public void TestIdentityRate()
