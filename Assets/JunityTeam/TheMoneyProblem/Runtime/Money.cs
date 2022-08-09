@@ -1,6 +1,6 @@
 ﻿namespace JunityTeam.TDDByExample.TheMoneyProblem
 {
-    public class Money
+    public class Money : Expression
     {
         protected int amount;
         public string Currency { get; protected set; }

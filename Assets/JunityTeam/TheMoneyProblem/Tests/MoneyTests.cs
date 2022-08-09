@@ -28,8 +28,11 @@ namespace JunityTeam.TDDByExample.TheMoneyProblem.Tests
         [Test]
         public void TestSimpleAdition()
         {
-            Money sum = Money.Dollar(5).Plus(Money.Dollar(5));
-            sum.Should().Be(Money.Dollar(10));
+            Money five = Money.Dollar(5);
+            Expression sum = five.Plus(five);
+            Bank bank = new Bank();
+            Money reduced = bank.Reduce(sum, "USD");
+            reduced.Should().Be(Money.Dollar(10));
         }
 
         [Test]
