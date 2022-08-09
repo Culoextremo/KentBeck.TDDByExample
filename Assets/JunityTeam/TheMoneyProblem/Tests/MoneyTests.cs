@@ -28,6 +28,13 @@ namespace JunityTeam.TDDByExample.TheMoneyProblem.Tests
         }
 
         [Test]
+        public void DifferentClassesEquals()
+        {
+            new Money(10, "CHF").Should().Be(new Franc(10, "CHF"));
+            
+        }
+        
+        [Test]
         public void FiveDollarsEqualFiveDollars()
         {
             Money.Dollar(5).Should().Be(Money.Dollar(5));

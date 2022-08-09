@@ -1,6 +1,6 @@
 ﻿namespace JunityTeam.TDDByExample.TheMoneyProblem
 {
-    public abstract class Money
+    public class Money
     {
         protected int amount;
         public string Currency { get; protected set; }
@@ -14,7 +14,7 @@
         public override bool Equals(object obj)
         {
             var money = (Money) obj;
-            return money.amount == amount && money.GetType() == GetType();
+            return money.amount == amount && money.Currency == Currency;
         }
         
         public static Money Dollar(int amount)
@@ -27,7 +27,10 @@
             return new Franc(amount, "CHF");
         }
 
-        public abstract Money Times(int multiplier);
+        public virtual Money Times(int multiplier)
+        {
+            return null;
+        }
         
     }
 }
