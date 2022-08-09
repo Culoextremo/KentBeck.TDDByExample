@@ -64,7 +64,20 @@ namespace JunityTeam.TDDByExample.TheMoneyProblem.Tests
         {
             "CHF".Should().Be(Money.Franc(1).Currency);
         }
-        
+
+        [Test]
+        public void SumIsCorrect()
+        {
+            Money one = Money.Dollar(1);
+            Money five = Money.Dollar(5);
+
+            Expression result = one.Plus(five);
+            Sum sum = (Sum) result;
+            
+            sum.augend.Should().Be(one);
+            sum.addend.Should().Be(five);
+        }
+
         [Test]
         public void FiveTimesTwoThenSameFiveTimesTwo()
         {

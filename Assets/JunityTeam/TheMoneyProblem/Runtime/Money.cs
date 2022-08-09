@@ -32,9 +32,9 @@
             return new Money(amount * multiplier, Currency);
         }
 
-        public Money Plus(Money addend)
+        public Expression Plus(Money addend)
         {
-            return new Money(amount + addend.amount, Currency);
+            return new Sum(this, addend);
         }
     }
 }
