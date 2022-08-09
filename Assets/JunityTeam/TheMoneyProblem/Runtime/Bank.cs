@@ -4,9 +4,9 @@
     {
         public Money Reduce(Expression source, string to)
         {
+            if (source is Money) return (Money) source;
             Sum sum = (Sum) source;
-            int amount = sum.augend.amount + sum.addend.amount;
-            return new Money(amount, to);
+            return sum.Reduce(to);
         }
     }
 }

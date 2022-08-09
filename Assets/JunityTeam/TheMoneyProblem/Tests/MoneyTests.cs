@@ -88,6 +88,14 @@ namespace JunityTeam.TDDByExample.TheMoneyProblem.Tests
         }
 
         [Test]
+        public void TestReduceMoney()
+        {
+            Bank bank = new Bank();
+            Money result = bank.Reduce(Money.Dollar(1), "USD");
+            result.Should().Be(Money.Dollar(1));
+        }
+
+        [Test]
         public void FiveTimesTwoThenSameFiveTimesTwo()
         {
             Money five = Money.Dollar(5);
