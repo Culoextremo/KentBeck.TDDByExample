@@ -26,6 +26,13 @@ namespace JunityTeam.TDDByExample.TheMoneyProblem.Tests
         }
 
         [Test]
+        public void TestSimpleAdition()
+        {
+            Money sum = Money.Dollar(5).Plus(Money.Dollar(5));
+            sum.Should().Be(Money.Dollar(10));
+        }
+
+        [Test]
         public void FiveDollarsEqualFiveDollars()
         {
             Money.Dollar(5).Should().Be(Money.Dollar(5));
