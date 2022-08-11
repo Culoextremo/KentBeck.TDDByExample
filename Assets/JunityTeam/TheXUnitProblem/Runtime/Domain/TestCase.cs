@@ -25,7 +25,6 @@ namespace JunityTeam.TDDByExample.TheXUnitProblem.Runtime.Domain
             catch (Exception e)
             {
                 result.TestFailed();
-                throw;
             }
 
             TearDown();
