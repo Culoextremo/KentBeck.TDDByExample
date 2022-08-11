@@ -3,14 +3,18 @@
     public class WasRun
     {
         public bool TestWasRun { get; private set; }
+        public readonly string Name;
+
         public WasRun(string name)
         {
             TestWasRun = false;
+            Name = name;
         }
 
         public void Run()
         {
-            TestMethod();
+            var method = GetType().GetMethod(Name);
+            method.Invoke(this, null);
         }
         public void TestMethod()
         {
