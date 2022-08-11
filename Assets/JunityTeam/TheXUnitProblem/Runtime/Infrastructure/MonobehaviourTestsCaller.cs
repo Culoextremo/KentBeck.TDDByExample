@@ -10,7 +10,7 @@ namespace JunityTeam.TDDByExample.TheXUnitProblem.Runtime.Infrastructure
         {
             var test = new WasRun("TestMethod");
             Debug.Log(test.TestWasRun);
-            test.TestMethod();
+            test.Run();
             Debug.Log(test.TestWasRun);
         }
     }

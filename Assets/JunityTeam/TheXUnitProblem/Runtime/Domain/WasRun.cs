@@ -8,6 +8,10 @@
             TestWasRun = false;
         }
 
+        public void Run()
+        {
+            TestMethod();
+        }
         public void TestMethod()
         {
             TestWasRun = true;
