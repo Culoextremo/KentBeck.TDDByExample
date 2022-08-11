@@ -1,4 +1,6 @@
-﻿namespace JunityTeam.TDDByExample.TheXUnitProblem.Runtime.Domain
+﻿using System;
+
+namespace JunityTeam.TDDByExample.TheXUnitProblem.Runtime.Domain
 {
     public class WasRun : TestCase
     {
@@ -16,6 +18,11 @@
         public void TestMethod()
         {
             Log += "TestMethod ";
+        }
+        
+        public void TestBrokenMethod()
+        {
+            throw new Exception();
         }
 
         public override void TearDown()
