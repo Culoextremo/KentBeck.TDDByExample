@@ -12,12 +12,19 @@ namespace JunityTeam.TDDByExample.TheXUnitProblem.Runtime.Infrastructure
         {
             SetUp();
             TestTemplateMethod();
+            TestResult();
         }
 
         private void SetUp()
         {
         }
 
+        private void TestResult()
+        {
+            var test = new WasRun("TestMethod");
+            var result = test.Run();
+            result.Summary.Should().Be("1 run, 0 failed");
+        }
         private void TestTemplateMethod()
         {
             var test = new WasRun("TestMethod");

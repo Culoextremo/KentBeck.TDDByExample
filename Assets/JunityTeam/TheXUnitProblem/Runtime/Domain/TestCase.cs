@@ -10,12 +10,13 @@
 
         public abstract void SetUp();
 
-        public void Run()
+        public TestResult Run()
         {
             SetUp();
             var method = GetType().GetMethod(Name);
             method.Invoke(this, null);
             TearDown();
+            return new TestResult();
         }
 
         public abstract void TearDown();
