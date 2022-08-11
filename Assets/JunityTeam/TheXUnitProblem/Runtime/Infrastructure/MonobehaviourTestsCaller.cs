@@ -6,17 +6,10 @@ namespace JunityTeam.TDDByExample.TheXUnitProblem.Runtime.Infrastructure
 {
     public class MonobehaviourTestsCaller : MonoBehaviour
     {
-        private WasRun test;
-        
         private void Start()
         {
-            SetUp();
             TestTemplateMethod();
             TestResult();
-        }
-
-        private void SetUp()
-        {
         }
 
         private void TestResult()
