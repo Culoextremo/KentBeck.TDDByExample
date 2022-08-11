@@ -1,4 +1,6 @@
-﻿namespace JunityTeam.TDDByExample.TheXUnitProblem.Runtime.Domain
+﻿using System;
+
+namespace JunityTeam.TDDByExample.TheXUnitProblem.Runtime.Domain
 {
     public abstract class TestCase
     {
@@ -15,8 +17,17 @@
             SetUp();
             var result = new TestResult();
             result.TestStarted();
-            var method = GetType().GetMethod(Name);
-            method.Invoke(this, null);
+            try
+            {
+                var method = GetType().GetMethod(Name);
+                method.Invoke(this, null);
+            }
+            catch (Exception e)
+            {
+                result.TestFailed();
+                throw;
+            }
+
             TearDown();
             return result;
         }

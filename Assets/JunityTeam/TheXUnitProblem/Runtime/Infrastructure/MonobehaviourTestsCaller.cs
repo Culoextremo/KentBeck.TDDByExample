@@ -8,6 +8,7 @@ namespace JunityTeam.TDDByExample.TheXUnitProblem.Runtime.Infrastructure
     {
         private void Start()
         {
+            TestFailedResultFormatting();
             TestTemplateMethod();
             TestResult();
             TestBrokenMethod();
@@ -20,6 +21,14 @@ namespace JunityTeam.TDDByExample.TheXUnitProblem.Runtime.Infrastructure
             result.Summary.Should().Be("1 run, 0 failed");
         }
 
+        private void TestFailedResultFormatting()
+        {
+            var result = new TestResult();
+            result.TestStarted();
+            result.TestFailed();
+            result.Summary.Should().Be("1 run, 1 failed");
+        }
+        
         private void TestBrokenMethod()
         {
             var test = new WasRun("TestBrokenMethod");

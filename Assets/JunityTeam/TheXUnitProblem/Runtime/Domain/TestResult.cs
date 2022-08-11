@@ -2,9 +2,11 @@
 {
     public class TestResult
     {
-        public string Summary => RunCount + " run, 0 failed";
+        public string Summary => RunCount + " run, " + ErrorCount + " failed";
 
         public int RunCount { get; private set; }
+        public int ErrorCount { get; private set; }
+
         public TestResult()
         {
             RunCount = 0;
@@ -16,5 +18,9 @@
         }
 
 
+        public void TestFailed()
+        {
+            ErrorCount++;
+        }
     }
 }
