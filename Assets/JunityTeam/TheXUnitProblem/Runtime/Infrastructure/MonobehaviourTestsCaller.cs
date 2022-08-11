@@ -1,6 +1,6 @@
-﻿using System;
-using JunityTeam.TDDByExample.TheXUnitProblem.Runtime.Domain;
+﻿using JunityTeam.TDDByExample.TheXUnitProblem.Runtime.Domain;
 using UnityEngine;
+using FluentAssertions;
 
 namespace JunityTeam.TDDByExample.TheXUnitProblem.Runtime.Infrastructure
 {
@@ -9,9 +9,9 @@ namespace JunityTeam.TDDByExample.TheXUnitProblem.Runtime.Infrastructure
         private void Start()
         {
             var test = new WasRun("TestMethod");
-            Debug.Log(test.TestWasRun);
+            test.TestWasRun.Should().Be(false);
             test.Run();
-            Debug.Log(test.TestWasRun);
+            test.TestWasRun.Should().Be(true);
         }
     }
 }

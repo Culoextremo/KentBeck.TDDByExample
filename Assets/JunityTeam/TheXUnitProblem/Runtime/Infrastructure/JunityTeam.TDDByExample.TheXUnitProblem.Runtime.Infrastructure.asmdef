@@ -2,7 +2,8 @@
     "name": "JunityTeam.TDDByExample.TheXUnitProblem.Runtime.Infrastructure",
     "rootNamespace": "JunityTeam.TDDByExample.TheXUnitProblem.Runtime.Infrastructure",
     "references": [
-        "GUID:de7bc8139315e564ca1aa582c1a469ac"
+        "GUID:de7bc8139315e564ca1aa582c1a469ac",
+        "GUID:e372c541aba5148868e12aa078ca7c20"
     ],
     "includePlatforms": [],
     "excludePlatforms": [],
