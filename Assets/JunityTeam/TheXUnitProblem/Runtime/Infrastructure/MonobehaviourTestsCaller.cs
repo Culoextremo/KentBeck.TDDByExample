@@ -10,26 +10,19 @@ namespace JunityTeam.TDDByExample.TheXUnitProblem.Runtime.Infrastructure
         
         private void Start()
         {
-            Setup();
-            TestCaseTest();
-            TestSetup();
+            SetUp();
+            TestTemplateMethod();
         }
 
-        private void Setup()
+        private void SetUp()
         {
-            test = new WasRun("TestMethod");
         }
 
-        private void TestSetup()
+        private void TestTemplateMethod()
         {
+            var test = new WasRun("TestMethod");
             test.Run();
-            test.WasSetUp.Should().Be(true);
-        }
-        
-        private void TestCaseTest()
-        {
-            test.Run();
-            test.TestWasRun.Should().Be(true);
+            test.Log.Should().Be("SetUp TestMethod ");
         }
     }
 }
