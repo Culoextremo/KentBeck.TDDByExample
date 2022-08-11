@@ -21,5 +21,10 @@
             TestWasRun = true;
             Log += "TestMethod ";
         }
+
+        public override void TearDown()
+        {
+            Log += "TearDown ";
+        }
     }
 }

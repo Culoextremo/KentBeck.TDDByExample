@@ -22,7 +22,7 @@ namespace JunityTeam.TDDByExample.TheXUnitProblem.Runtime.Infrastructure
         {
             var test = new WasRun("TestMethod");
             test.Run();
-            test.Log.Should().Be("SetUp TestMethod ");
+            test.Log.Should().Be("SetUp TestMethod TearDown ");
         }
     }
 }
