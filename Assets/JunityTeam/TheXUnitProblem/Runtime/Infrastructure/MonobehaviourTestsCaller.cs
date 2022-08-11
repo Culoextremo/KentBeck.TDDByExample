@@ -8,6 +8,19 @@ namespace JunityTeam.TDDByExample.TheXUnitProblem.Runtime.Infrastructure
     {
         private void Start()
         {
+            TestCaseTest();
+            TestSetup();
+        }
+
+        private void TestSetup()
+        {
+            var test = new WasRun("TestMethod");
+            test.Run();
+            test.WasSetUp.Should().Be(true);
+        }
+        
+        private void TestCaseTest()
+        {
             var test = new WasRun("TestMethod");
             test.TestWasRun.Should().Be(false);
             test.Run();

@@ -7,9 +7,15 @@
         {
             Name = name;
         }
+
+        public virtual void SetUp()
+        {
+            
+        }
         
         public void Run()
         {
+            SetUp();
             var method = GetType().GetMethod(Name);
             method.Invoke(this, null);
         }
