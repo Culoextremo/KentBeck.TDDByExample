@@ -13,10 +13,12 @@
         public TestResult Run()
         {
             SetUp();
+            var result = new TestResult();
+            result.TestStarted();
             var method = GetType().GetMethod(Name);
             method.Invoke(this, null);
             TearDown();
-            return new TestResult();
+            return result;
         }
 
         public abstract void TearDown();
