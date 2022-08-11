@@ -22,7 +22,6 @@ namespace JunityTeam.TDDByExample.TheXUnitProblem.Runtime.Infrastructure
         private void TestCaseTest()
         {
             var test = new WasRun("TestMethod");
-            test.TestWasRun.Should().Be(false);
             test.Run();
             test.TestWasRun.Should().Be(true);
         }
