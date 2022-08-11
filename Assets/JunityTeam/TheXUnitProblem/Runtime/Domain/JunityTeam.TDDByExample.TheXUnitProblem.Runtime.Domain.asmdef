@@ -1,0 +1,14 @@
+{
+    "name": "JunityTeam.TDDByExample.TheXUnitProblem.Runtime.Domain",
+    "rootNamespace": "JunityTeam.TDDByExample.TheXUnitProblem.Runtime.Domain",
+    "references": [],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": true
+}

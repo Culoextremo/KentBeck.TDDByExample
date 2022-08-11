@@ -1,0 +1,16 @@
+{
+    "name": "JunityTeam.TDDByExample.TheXUnitProblem.Runtime.Infrastructure",
+    "rootNamespace": "JunityTeam.TDDByExample.TheXUnitProblem.Runtime.Infrastructure",
+    "references": [
+        "GUID:de7bc8139315e564ca1aa582c1a469ac"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}
